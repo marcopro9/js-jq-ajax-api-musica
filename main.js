@@ -16,6 +16,7 @@ $(document).ready(function() {
       alert("errore!");
     }
   })
+  
   // Scrivo la funzione per stampare i dati dell'API con Handlebars.
   function printMusicAlbum(allMusicAlbum){
     // Prendo la source (tramite Handlebars)...
@@ -32,22 +33,23 @@ $(document).ready(function() {
       $('.cds-container').append(html);
     }
   }
+
   // creo un sort by genere al click su option
   $(".option").on("click", function () {
     // creo una variabile che prende il valore dell'opzione cliccata....
 		var selected = $(this).val();
     // ...se questo valore corrisponde a "Tutti"...
 		if (selected === "Tutti") {
-      // ...mostra tutti gli album,...
+    // ...mostra tutti gli album,...
 			$(".cd").show();
 		} else {
       // ...altrimenti scorre tutti gli album e...
 			$(".cd").each(function () {
         //...se trova il valore dell'album corrispondente all'opzione selezionata
 				if ($(this).find(".genre").text() === selected) {
-          // ...mostra gli album di quel genere...
+        // ...mostra gli album di quel genere...
 					$(this).show();
-          // ...e nasconde gli altri
+        // ...e nasconde gli altri
 				} else {
 					$(this).hide();
 				}
