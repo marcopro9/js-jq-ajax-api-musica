@@ -25,6 +25,18 @@ header img {
     height: 50px;
     margin-top: 10px;
 }
+.genere{
+  margin-top: 20px;
+}
+.genere>label{
+  font-size: 20px;
+  color: #fff;
+}
+.genere>select{
+  margin-left: 10px;
+  padding: 5px;
+  border-radius: 10px;
+}
 
 .cds-container {
     display: flex;

@@ -7,6 +7,7 @@ $(document).ready(function() {
     // In caso di successo, parte la funzione che prende i dati e...
     success: function (data){
       var album = data.response;
+      console.log(album);
       // ...li stampa usando il template Handlebars.
       printMusicAlbum(album);
     },
@@ -31,4 +32,6 @@ $(document).ready(function() {
       $('.cds-container').append(html);
     }
   }
+  // creo un sort by genere tramite select
+
 });

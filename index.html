@@ -15,6 +15,17 @@
             </div>
         </header>
 
+        <div class="container genere">
+          <label for="">Ordina per genere:</label>
+          <select class="select" name="">
+            <option class="option" value="Rock">Rock</option>
+            <option class="option" value="Pop">Pop</option>
+            <option class="option" value="Jazz">Jazz</option>
+            <option class="option" value="Metal">Metal</option>
+          </select>
+        </div>
+
+
         <!-- CONTAINER CD -->
         <div class="cds-container container">
             <!-- Disco ad esempio -->
@@ -33,6 +44,8 @@
               <img src="{{ poster }}" alt="">
               <!-- TITOLO ALBUM -->
               <h3>{{ title }}</h3>
+              <!-- GENERE -->
+              <span class="genre">{{ genre }}</span>
               <!-- AUTORE -->
               <span class="author">{{ author }}</span>
               <!-- ANNO DI PUBBLICAZIONE -->
