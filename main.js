@@ -42,8 +42,12 @@ $(document).ready(
         // creo una variabile che prende il valore dell'opzione cliccata....
         var selected = $(this).val();
         // ...e a seconda dell'opzione mostro e nascondo
-        $(".cd." + selected).show();
         $(".cd").hide();
+        $(".cd." + selected).show();
+        if (selected === "Tutti") {
+          // ...mostra tutti gli album,...
+          $(".cd").show();
+        }
       });
     }
   }
