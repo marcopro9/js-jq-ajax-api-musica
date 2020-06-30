@@ -11,7 +11,7 @@ $(document).ready(
         // ...li stampa usando il template Handlebars.
         printMusicAlbum(album);
         //funzione per ordinare per generi
-        styles()
+        styles();
       },
       // In caso di errore darà un messaggio alert di errore.
       error: function(){
@@ -22,7 +22,7 @@ $(document).ready(
     // Scrivo la funzione per stampare i dati dell'API con Handlebars.
     function printMusicAlbum(allMusicAlbum){
       // Prendo la source (tramite Handlebars)...
-      var source = document.getElementById("entry-template").innerHTML;
+      var source = $("#entry-template").html();
       // ...poi scrivo la variabile che andrà a compilare la source.
       var template = Handlebars.compile(source);
       // faccio partire un ciclo for...
@@ -38,11 +38,11 @@ $(document).ready(
 
     // creo una funzione per il sort by genere al change su option
     function styles(){
-      $(".select").change(function () {
+      $("select").change(function () {
         // creo una variabile che prende il valore dell'opzione cliccata....
         var selected = $(this).val();
         // ...e a seconda dell'opzione mostro e nascondo
-        $(".cd."+ selected).show();
+        $(".cd." + selected).show();
         $(".cd").hide();
       });
     }
